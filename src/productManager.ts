@@ -14,7 +14,7 @@ export class ProductManager {
 
   addProduct(input: CreateProductInput): Product {
     const product: Product = {
-      id: `prod-{${Date.now()}}`,
+      id: `prod-{${Math.random().toString(36).slice(2, 8)}}`,
       ...input,
     };
 
@@ -23,7 +23,7 @@ export class ProductManager {
     return product;
   }
 
-  getAllProduct(): Product[] {
+  getAllProducts(): Product[] {
     return this.storage.getAll();
   }
 
