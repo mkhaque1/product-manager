@@ -3,7 +3,7 @@
 // seperation of concerns
 // encapsulation
 
-class Storage<T extends { id: string }> {
+export class Storage<T extends { id: string }> {
   // empty array to hold items of product
   private items: T[] = [];
 
